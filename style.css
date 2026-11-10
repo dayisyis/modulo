@@ -1,0 +1,355 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f9f5;
+    color: #333;
+}
+
+
+
+.encabezado {
+    background-color: #dce9dc;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.encabezado h1 {
+    color: #426b50;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    text-decoration: none;
+    color: #365a40;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8aab82;
+}
+
+
+/* BUSCADOR */
+.buscador {
+    text-align: center;
+    padding: 25px;
+}
+
+.buscador input {
+    padding: 12px;
+    width: 50%;
+    border: 1px solid #b5cbb5;
+    border-radius: 20px;
+}
+
+.buscador button {
+    padding: 12px 20px;
+    background-color: #527b5b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+
+
+.banner {
+    background: linear-gradient(
+        rgba(30, 60, 35, 0.55),
+        rgba(30, 60, 35, 0.55)
+    ), url("../fotos/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    min-height: 380px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+    padding: 30px;
+}
+
+.contenido-banner h2 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.contenido-banner p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+
+
+.boton {
+    display: inline-block;
+    background-color: #527b5b;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.boton:hover {
+    background-color: #365a40;
+}
+
+
+
+.nosotros {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.nosotros h2,
+.categorias h2,
+.productos h2 {
+    color: #426b50;
+    margin-bottom: 20px;
+}
+
+.nosotros p {
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
+
+
+
+.categorias {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contenedor-categorias {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.categoria {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #00000015;
+}
+
+.categoria img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.categoria h3 {
+    margin-top: 12px;
+    color: #426b50;
+}
+
+
+
+.productos {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.producto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px #00000015;
+}
+
+.producto img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    color: #426b50;
+    margin: 12px 0;
+}
+
+.producto p {
+    margin-bottom: 12px;
+}
+
+.producto span {
+    display: block;
+    font-weight: bold;
+    color: #527b5b;
+    font-size: 19px;
+}
+
+
+/* CONTACTO */
+.contacto {
+    background-color: #dce9dc;
+    color: #365a40;
+    text-align: center;
+    padding: 35px 20px;
+    line-height: 2;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .buscador input {
+        width: 70%;
+    }
+
+    .contenedor-categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contenedor-productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contenedor-categorias,
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido-banner h2 {
+        font-size: 27px;
+    }
+
+    .buscador input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+}
+
+
+
+/* FORMULARIOS */
+form {
+    margin: 15px 0;
+}
+
+form input {
+    padding: 10px;
+    border: 1px solid #b5cbb5;
+    border-radius: 8px;
+}
+
+form button {
+    cursor: pointer;
+}
+
+
+/* BOTONES DEL CARRITO */
+.producto form .boton {
+    border: none;
+    cursor: pointer;
+}
+
+
+/* CATALOGO */
+.productos form {
+    margin-bottom: 25px;
+}
+
+.productos > form input {
+    width: 250px;
+    max-width: 100%;
+}
+
+
+/* CARRITO */
+.producto input[type="number"] {
+    width: 70px;
+}
+
+
+/* PANEL DE ADMINISTRACION */
+
+.nosotros input,
+.nosotros textarea,
+.nosotros select {
+    width: 80%;
+    max-width: 450px;
+    padding: 12px;
+    border: 1px solid #b5cbb5;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.nosotros textarea {
+    min-height: 100px;
+}
+
+.nosotros form {
+    margin-top: 25px;
+}
+
+.producto form {
+    margin-top: 10px;
+}
+
+.producto button {
+    border: none;
+}
+
+@media (max-width: 480px) {
+
+    .nosotros input,
+    .nosotros textarea,
+    .nosotros select {
+        width: 100%;
+    }
+
+}
